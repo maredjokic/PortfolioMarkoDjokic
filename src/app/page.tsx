@@ -16,7 +16,7 @@ export default function Home() {
         <Box sx={{
           width: '100%',
           display: 'flex',
-          flexDirection: 'row',
+          flexDirection: { xs: 'column', sm: 'column', md: 'row' },
         }}>
         <ContactAddressBar/>
         <Box sx={{
