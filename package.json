@@ -1,8 +1,11 @@
 {
+  "homepage": "https://maredjokic.github.io/PortfolioMarkoDjokic",
   "name": "material-ui-nextjs-ts",
   "version": "5.0.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -30,6 +33,7 @@
     "@types/react-dom": "latest",
     "eslint": "latest",
     "eslint-config-next": "^14.0.0",
+    "gh-pages": "^6.2.0",
     "typescript": "latest"
   }
 }
