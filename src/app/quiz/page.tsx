@@ -93,11 +93,6 @@ const Quiz: React.FC<QuizProps> = ({ amount }) => {
   );
 };
 
-// Definisanje PropTypes za komponentu
-Quiz.propTypes = {
-  amount: PropTypes.number.isRequired,
-};
-
 // Inline stilovi
 const styles = {
   quizContainer: {
