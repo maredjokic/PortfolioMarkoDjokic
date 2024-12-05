@@ -10,11 +10,8 @@ interface Question {
   incorrect_answers: string[];
 }
 
-interface QuizProps {
-  amount: number;
-}
 
-const Quiz: React.FC<QuizProps> = ({ amount }) => {
+export default function Quiz() {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
@@ -23,10 +20,10 @@ const Quiz: React.FC<QuizProps> = ({ amount }) => {
 
   useEffect(() => {
     // Učitaj pitanja sa API-ja
-    fetch(`https://opentdb.com/api.php?amount=${amount}&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=10&type=multiple`)
       .then((response) => response.json())
       .then((data) => setQuestions(data.results));
-  }, [amount]);
+  }, []);
 
   const handleAnswerClick = (answer: string) => {
     if (isAnswered) return; // Ne dozvoljava ponovno klikanje
@@ -138,5 +135,3 @@ const styles = {
     marginTop: '20px',
   },
 };
-
-export default Quiz;
