@@ -12,6 +12,8 @@ import ProjectsStep from '@/app/stepperPages/ProjectsStep';
 import StudentProjectsStep from '@/app/stepperPages/StudentProjectsStep';
 import LanguagesStep from '@/app/stepperPages/LanguagesStep';
 import OtherSkillsStep from '@/app/stepperPages/OtherSkilsStep';
+import { useMediaQuery } from '@mui/material';
+import { Theme } from '@mui/material/styles';
 
 const steps = [
     'Experiance',
@@ -33,7 +35,7 @@ export default function StepperMui() {
   const isStepSkipped = (step: number) => {
     return skipped.has(step);
   };
-
+  
   const handleNext = () => {
     let newSkipped = skipped;
     if (isStepSkipped(activeStep)) {
@@ -87,6 +89,11 @@ export default function StepperMui() {
     }
   };
 
+  const handleStepClick = (step: number) => {
+    setActiveStep(step);
+  };
+
+  const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -99,14 +106,14 @@ export default function StepperMui() {
         <Button onClick={handleBack}>
                 {'<<<'}
             </Button>
-            <Stepper sx={{flexGrow: 1}} nonLinear={true} activeStep={activeStep}>
+            <Stepper sx={{flexGrow: 1}}  nonLinear={true} activeStep={activeStep} orientation={isSmallScreen ? 'vertical' : 'horizontal'}>
             {steps.map((label, index) => {
             const stepProps: { completed?: boolean } = {};
             const labelProps: {
                 optional?: React.ReactNode;
             } = {};
             return (
-                <Step key={label} {...stepProps}>
+                <Step onClick={() => handleStepClick(index)} key={label} {...stepProps}>
                 <StepLabel {...labelProps}>{label}</StepLabel>
                 </Step>
             );
@@ -117,7 +124,7 @@ export default function StepperMui() {
         </Button>
         </Box>
         <Box sx={{ }}>
-        {renderStepContent(activeStep)}
+          {renderStepContent(activeStep)}
         </Box>
     </Box>
   );
