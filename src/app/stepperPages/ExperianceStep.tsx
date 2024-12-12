@@ -14,32 +14,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 
 function ExperienceStep() {
-  function Image1 () {
-    return <Image
-      src="/static/images/cubic1.jpg" 
-      alt="Project 1"
-      width={1000}
-      height={1000}
-      style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-  /> }
-  
-  function Image2 () {
-    return <Image
-      src="/static/images/cubic3.jpg" 
-      alt="Project 1"
-      width={1000}
-      height={1000}
-      style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-  /> }
-  
-  function Image3 () {
-    return <Image
-      src="/static/images/cubic2.jpg" 
-      alt="Project 1"
-      width={1000}
-      height={1000}
-      style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-  /> }
   return (
     <Box sx={{ p: 4, bgcolor: 'background.paper'}}>
       <Box sx={{ }}>
@@ -64,27 +38,45 @@ function ExperienceStep() {
           </ListItem>
         </List>
 
-        <Accordion>
+        {/* <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         > Show photos </AccordionSummary>
-           <AccordionDetails>
-        <Box sx={{ 
-            display: 'flex', 
-            flexDirection: { sm: 'column', md: 'row' }, 
-            justifyContent: 'space-between', 
-            alignItems: 'center', 
-            gap: 2,
-            
-          }}>
-          <Image1 />
-          <Image2 />
-          <Image3 />
-        </Box>
-      </AccordionDetails>
-      </Accordion>
+           <AccordionDetails> */}
+      <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { sm: 'column', md: 'row' }, 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          gap: 2,
+          
+        }}>
+        <Image
+          src="/static/images/cubic1.jpg" 
+          alt="Project 1"
+          width={1000}
+          height={1000}
+          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+        <Image
+          src="/static/images/cubic3.jpg" 
+          alt="Project 3"
+          width={1000}
+          height={1000}
+          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+        <Image
+          src="/static/images/cubic2.jpg" 
+          alt="Project 2"
+          width={1000}
+          height={1000}
+          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+      </Box>
+      {/* </AccordionDetails>
+      </Accordion> */}
       </Box>
     </Box>
   );
