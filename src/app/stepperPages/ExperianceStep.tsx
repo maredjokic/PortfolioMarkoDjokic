@@ -12,7 +12,32 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
+function Image1 () {
+  return <Image
+    src="/static/images/cubic1.jpg" 
+    alt="Project 1"
+    width={1000}
+    height={1000}
+    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+/> }
 
+function Image2 () {
+  return <Image
+    src="/static/images/cubic3.jpg" 
+    alt="Project 1"
+    width={1000}
+    height={1000}
+    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+/> }
+
+function Image3 () {
+  return <Image
+    src="/static/images/cubic2.jpg" 
+    alt="Project 1"
+    width={1000}
+    height={1000}
+    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+/> }
 
 function ExperienceStep() {
   return (
@@ -46,36 +71,18 @@ function ExperienceStep() {
           id="panel1a-header"
         > Show photos </AccordionSummary>
            <AccordionDetails>
-      <Box sx={{ 
-          display: 'flex', 
-          flexDirection: { sm: 'column', md: 'row' }, 
-          justifyContent: 'space-between', 
-          alignItems: 'center', 
-          gap: 2,
-          
-        }}>
-        <Image
-          src="/static/images/cubic1.jpg" 
-          alt="Project 1"
-          width={1000}
-          height={1000}
-          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-        />
-        <Image
-          src="/static/images/cubic3.jpg" 
-          alt="Project 3"
-          width={1000}
-          height={1000}
-          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-        />
-        <Image
-          src="/static/images/cubic2.jpg" 
-          alt="Project 2"
-          width={1000}
-          height={1000}
-          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-        />
-      </Box>
+        <Box sx={{ 
+            display: 'flex', 
+            flexDirection: { sm: 'column', md: 'row' }, 
+            justifyContent: 'space-between', 
+            alignItems: 'center', 
+            gap: 2,
+            
+          }}>
+          <Image1 />
+          <Image2 />
+          <Image3 />
+        </Box>
       </AccordionDetails>
       </Accordion>
       </Box>
