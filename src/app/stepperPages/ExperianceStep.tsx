@@ -47,7 +47,7 @@ function ExperienceStep() {
            <AccordionDetails>
       <Box sx={{ 
           display: 'flex', 
-          flexDirection: { sm: 'column', md: 'row' }, 
+          flexDirection: {xs: 'column', sm: 'column', md: 'row' }, 
           justifyContent: 'space-between', 
           alignItems: 'center', 
           gap: 2,
