@@ -11,6 +11,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import image1 from '/public/static/images/cubic1.jpg';
+import image2 from '/public/static/images/cubic2.jpg';
+import image3 from '/public/static/images/cubic3.jpg';
 
 function ExperienceStep() {
   return (
@@ -53,21 +56,21 @@ function ExperienceStep() {
           
         }}>
         <Image
-          src="/static/images/cubic1.jpg" 
+          src={image1}
           alt="Project 1"
           width={1000}
           height={1000}
           style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
         />
         <Image
-          src="/static/images/cubic3.jpg" 
+          src={image3}
           alt="Project 3"
           width={1000}
           height={1000}
           style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
         />
         <Image
-          src="/static/images/cubic2.jpg" 
+          src={image2}
           alt="Project 2"
           width={1000}
           height={1000}
