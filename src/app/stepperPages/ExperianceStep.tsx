@@ -12,34 +12,34 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function Image1 () {
-  return <Image
-    src="/static/images/cubic1.jpg" 
-    alt="Project 1"
-    width={1000}
-    height={1000}
-    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-/> }
-
-function Image2 () {
-  return <Image
-    src="/static/images/cubic3.jpg" 
-    alt="Project 1"
-    width={1000}
-    height={1000}
-    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-/> }
-
-function Image3 () {
-  return <Image
-    src="/static/images/cubic2.jpg" 
-    alt="Project 1"
-    width={1000}
-    height={1000}
-    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
-/> }
 
 function ExperienceStep() {
+  function Image1 () {
+    return <Image
+      src="/static/images/cubic1.jpg" 
+      alt="Project 1"
+      width={1000}
+      height={1000}
+      style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+  /> }
+  
+  function Image2 () {
+    return <Image
+      src="/static/images/cubic3.jpg" 
+      alt="Project 1"
+      width={1000}
+      height={1000}
+      style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+  /> }
+  
+  function Image3 () {
+    return <Image
+      src="/static/images/cubic2.jpg" 
+      alt="Project 1"
+      width={1000}
+      height={1000}
+      style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+  /> }
   return (
     <Box sx={{ p: 4, bgcolor: 'background.paper'}}>
       <Box sx={{ }}>
