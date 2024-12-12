@@ -38,13 +38,13 @@ function ExperienceStep() {
           </ListItem>
         </List>
 
-        {/* <Accordion>
+        <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         > Show photos </AccordionSummary>
-           <AccordionDetails> */}
+           <AccordionDetails>
       <Box sx={{ 
           display: 'flex', 
           flexDirection: { sm: 'column', md: 'row' }, 
@@ -54,29 +54,29 @@ function ExperienceStep() {
           
         }}>
         <Image
-          src="/static/images/cubic1.jpg" 
+          src="/static/images/cubic1.jpeg" 
           alt="Project 1"
           width={1000}
           height={1000}
           style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
         />
         <Image
-          src="/static/images/cubic3.jpg" 
+          src="/static/images/cubic3.jpeg" 
           alt="Project 3"
           width={1000}
           height={1000}
           style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
         />
         <Image
-          src="/static/images/cubic2.jpg" 
+          src="/static/images/cubic2.jpeg" 
           alt="Project 2"
           width={1000}
           height={1000}
           style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
         />
       </Box>
-      {/* </AccordionDetails>
-      </Accordion> */}
+      </AccordionDetails>
+      </Accordion>
       </Box>
     </Box>
   );
