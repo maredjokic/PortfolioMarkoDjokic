@@ -11,19 +11,19 @@ function OtherSkillsStep() {
       <List sx={{ }}>
         <ListItem>
           <ListItemText 
-            primary="Testing Tools" 
+            primary="Testing tools" 
             secondary="Storybook, Unit Testing (Mocha, Jest)" 
           />
         </ListItem>
         <ListItem>
           <ListItemText 
-            primary="Development Tools" 
+            primary="Development utilities" 
             secondary="Bash, GitBash, Vim" 
           />
         </ListItem>
         <ListItem>
           <ListItemText 
-            primary="Operating Systems" 
+            primary="Operating systems" 
             secondary="Windows, Linux" 
           />
         </ListItem>
@@ -35,8 +35,26 @@ function OtherSkillsStep() {
         </ListItem>
         <ListItem>
           <ListItemText 
-            primary="UI/UX Collaboration" 
+            primary="UI/UX collaboration" 
             secondary="Experienced in following UI designs using Figma" 
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText 
+            primary="Favorite Book" 
+            secondary="Clean Code - Robert C. Martin" 
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText 
+            primary="Driver's license" 
+            secondary="B category" 
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText 
+            primary="Hobby" 
+            secondary="Football, Futsal" 
           />
         </ListItem>
       </List>

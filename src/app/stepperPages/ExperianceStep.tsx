@@ -6,6 +6,11 @@ import Typography from '@mui/material/Typography';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
+import Image from 'next/image';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 function ExperienceStep() {
   return (
@@ -31,6 +36,46 @@ function ExperienceStep() {
             <ListItemText primary="Software Engineering Intern" secondary="2019 (2 mos)" />
           </ListItem>
         </List>
+
+        <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        > Show photos </AccordionSummary>
+           <AccordionDetails>
+      <Box sx={{ 
+          display: 'flex', 
+          flexDirection: { sm: 'column', md: 'row' }, 
+          justifyContent: 'space-between', 
+          alignItems: 'center', 
+          gap: 2,
+          
+        }}>
+        <Image
+          src="/static/images/cubic1.jpg" 
+          alt="Project 1"
+          width={1000}
+          height={1000}
+          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+        <Image
+          src="/static/images/cubic3.jpg" 
+          alt="Project 3"
+          width={1000}
+          height={1000}
+          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+        <Image
+          src="/static/images/cubic2.jpg" 
+          alt="Project 2"
+          width={1000}
+          height={1000}
+          style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+      </Box>
+      </AccordionDetails>
+      </Accordion>
       </Box>
     </Box>
   );
