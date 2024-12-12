@@ -11,9 +11,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import image1 from '/public/static/images/cubic1.jpg';
-import image2 from '/public/static/images/cubic2.jpg';
-import image3 from '/public/static/images/cubic3.jpg';
+import image1 from '/static/images/cubic1.jpg';
+import image2 from '/static/images/cubic2.jpg';
+import image3 from '/static/images/cubic3.jpg';
 
 function ExperienceStep() {
   return (
