@@ -57,6 +57,22 @@ function OtherSkillsStep() {
             secondary="Football, Futsal" 
           />
         </ListItem>
+        <ListItem>
+          <ListItemText
+            primary="Attitude towards work" 
+            secondary="Excellent interpersonal and communication skills, enabling effective collaboration with team members and stakeholders." 
+          />
+          </ListItem>
+          <ListItem>
+          <ListItemText 
+            secondary="Highly adaptable and open-minded, fostering a team-oriented environment." 
+          />
+          </ListItem>
+          <ListItem>
+          <ListItemText 
+            secondary="Ego-free approach to problem-solving, prioritizing the success of the team and project over personal recognition." 
+          />
+          </ListItem>
       </List>
     </Box>
   );
