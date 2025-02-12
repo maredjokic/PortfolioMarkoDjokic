@@ -34,6 +34,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
               name: "Marko Đokić Software Engineer",
               description: "Portfolio CV Marko Đokić Software Engineer React .NET Vue.js Nuxt Next Dev",
               url: "https://www.markodjokic.dev/",
+              image: "https://www.markodjokic.dev/_next/image?url=%2Fstatic%2Fimages%2FmareImage.jpeg&w=384&q=75",
               telephone: "+381644402202",
               address: {
                 "@type": "PostalAddress",
