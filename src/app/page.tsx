@@ -27,7 +27,7 @@ export default function Home() {
             I'm Marko Đokić - Software Engineer
           </Typography>
           <Typography variant="h5" component="h3" sx={{ pl: 6, mb: 2 }}>
-          React | .NET
+          React | .NET | Vue
           </Typography>
           <StepperMui/>
         </Box>
