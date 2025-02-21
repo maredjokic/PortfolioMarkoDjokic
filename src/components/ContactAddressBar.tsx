@@ -13,7 +13,7 @@ function ContactAddressBar() {
 const theme = useTheme();
 
   return (
-    <Box sx={{ p: 3,  bgcolor: theme.palette.info.dark }}>
+    <Box sx={{ p: 3,  bgcolor: theme.palette.info.dark, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <Image
                 src="/static/images/mareImage.jpeg"
                 width={300}
