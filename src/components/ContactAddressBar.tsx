@@ -23,10 +23,10 @@ const theme = useTheme();
           alignItems: 'center' }}>
         <Image
                 src="/static/images/mareImage.jpeg"
-                width={330}
+                width={300}
                 height={200}
                 alt="Picture of the author"
-                layout="intrinsic"
+                layout="responsive"
             />
          <Box className="fade-slide-y">
             <ListItemText primary="Email" secondary="marko.djokic.contact@gmail.com" />
