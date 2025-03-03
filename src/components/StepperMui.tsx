@@ -71,22 +71,16 @@ export default function StepperMui() {
   };
 
   const renderStepContent = (step: number) => {
-    switch (step) {
-      case 0:
-        return <ExperienceStep />;
-      case 1:
-        return <EducationStep />;
-      case 2:
-        return <ProjectsStep />;
-      case 3:
-        return <StudentProjectsStep />;
-      case 4:
-        return <LanguagesStep />;
-      case 5:
-        return <OtherSkillsStep />;
-      default:
-        return <div/>;
-    }
+    return (
+      <div key={step} className="fade-slide-y">
+        {step === 0 && <ExperienceStep />}
+        {step === 1 && <EducationStep />}
+        {step === 2 && <ProjectsStep />}
+        {step === 3 && <StudentProjectsStep />}
+        {step === 4 && <LanguagesStep />}
+        {step === 5 && <OtherSkillsStep />}
+      </div>
+    );
   };
 
   const handleStepClick = (step: number) => {

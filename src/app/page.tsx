@@ -23,10 +23,10 @@ export default function Home() {
           width: '100%',
           maxWidth: '100%',
         }}>
-          <Typography variant="h4" component="h1" sx={{ pl: 7, pt: 2, mb: 2 }}>
+          <Typography className='fade-slide-x' variant="h4" component="h1" sx={{ pl: 7, pt: 2, mb: 2 }}>
             I'm Marko Đokić - Software Engineer
           </Typography>
-          <Typography variant="h5" component="h3" sx={{ pl: 6, mb: 2 }}>
+          <Typography className='fade-slide-x' variant="h5" component="h3" sx={{ pl: 6, mb: 2 }}>
           React | .NET | Vue
           </Typography>
           <StepperMui/>

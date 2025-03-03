@@ -3,6 +3,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
+import '@/app/globals.css';
 import ResponsiveAppBar from '@/components/ResponsiveAppBar';
 import "leaflet/dist/leaflet.css";
 

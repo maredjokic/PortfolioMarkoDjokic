@@ -1,0 +1,56 @@
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideInX {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} 
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAndReveal {
+  0% {
+    opacity: 0;
+    mask-size: 0% 100%; /* Početni state: slika nije vidljiva */
+  }
+  100% {
+    opacity: 1;
+    mask-size: 100% 100%; /* Kraj: slika potpuno otkrivena */
+  }
+}
+
+.fade-slide-y {
+  animation: fadeSlideIn 0.5s ease-out;
+}
+
+.fade-in-reveal {
+  animation: fadeInAndReveal 1s ease-out;
+}
+
+.fade-slide-x {
+  animation: fadeSlideInX 0.5s ease-out;
+}

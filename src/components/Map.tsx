@@ -16,7 +16,7 @@ const Map: React.FC = () => {
       });
 
   return (
-    <MapContainer center={serbiaCenter} zoom={zoom} style={{ height: "130px", width: "300px" }}>
+    <MapContainer className='fade-in-reveal' center={serbiaCenter} zoom={zoom} style={{ height: "120px", width: "250px" }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       
       <Marker position={pozarevacPosition} icon={customIcon}>
