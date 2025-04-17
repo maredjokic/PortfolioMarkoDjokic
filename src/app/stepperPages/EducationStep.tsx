@@ -15,13 +15,13 @@ function EducationStep() {
         <List>
           <ListItem>
             <ListItemText 
-              primary="Master’s Degree, Software Engineering" 
+              primary="Master’s Degree - Computer Science(Software Engineering), Master in Electrical Engineering and Computing" 
               secondary="2019 - 2024" 
             />
           </ListItem>
           <ListItem>
             <ListItemText 
-              primary="Engineer’s Degree, Computer Science (Bachelor)" 
+              primary="Engineer’s Degree - Computer Science, Bachelor in Electrical Engineering and Computing" 
               secondary="2015 - 2019" 
             />
           </ListItem>

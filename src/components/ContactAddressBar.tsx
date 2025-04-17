@@ -24,7 +24,7 @@ const theme = useTheme();
         <Image
                 src="/static/images/mareImage.jpeg"
                 width={320}
-                height={200}
+                height={310}
                 alt="Picture of the author"
                 layout="intrinsic"
             />
