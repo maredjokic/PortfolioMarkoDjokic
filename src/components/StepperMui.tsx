@@ -50,6 +50,10 @@ export default function StepperMui() {
   };
 
   const handleBack = () => {
+    if(activeStep === 0) {
+        setActiveStep(steps.length - 1);
+        return;
+    }
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
