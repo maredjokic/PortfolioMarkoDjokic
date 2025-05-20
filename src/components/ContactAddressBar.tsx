@@ -32,6 +32,7 @@ const theme = useTheme();
             <ListItemText primary="Email" secondary="marko.djokic.contact@gmail.com" />
             <ListItemText primary="Phone" secondary="+381644402202" />
             <ListItemText primary="Linkedin" secondary="https://www.linkedin.com/in/djokicmarko/" />
+            <ListItemText primary="Github" secondary="https://github.com/maredjokic/" />
             <ListItemText primary="Location" />
          </Box>
         <Map />
