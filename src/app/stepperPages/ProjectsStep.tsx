@@ -16,19 +16,19 @@ function ProjectsStep() {
           <ListItem>
             <ListItemText 
               primary="Unified Video +" 
-              secondary="Video streaming, enhancements platform, playing video on map - React.js" 
+              secondary="Video streaming, enhancements platform, playing video on map - React" 
             />
           </ListItem>
           <ListItem>
             <ListItemText 
               primary="Video-player" 
-              secondary="Reusable component for UV+ Live and Archive mode - Storybook - React.js" 
+              secondary="Reusable component for UV+ Live and Archive mode - Storybook - React" 
             />
           </ListItem>
           <ListItem>
             <ListItemText 
               primary="Prism library" 
-              secondary="Component Library for UV+ Storybook - React.js" 
+              secondary="Component Library for UV+ Storybook - React" 
             />
           </ListItem>
           <ListItem>
@@ -56,7 +56,7 @@ function ProjectsStep() {
           <ListItem>
             <ListItemText 
               primary="Jet" 
-              secondary="Video streaming, enhancements platform - Vue.js, Design and Development" 
+              secondary="Video streaming, enhancements platform - Vue, Design and Development" 
             />
           </ListItem>
         </List>
@@ -67,7 +67,7 @@ function ProjectsStep() {
           <ListItem>
             <ListItemText 
               primary="Video-Library" 
-              secondary="Work with video files, search, upload, paging, filters, ffmpeg editing, transcoding, playing video on webpage - Vue.js, .NET Core, PostgreSQL (Entity Framework)" 
+              secondary="Work with video files, search, upload, paging, filters, ffmpeg editing, transcoding, playing video on webpage - Vue, .NET Core, PostgreSQL (Entity Framework)" 
             />
           </ListItem>
         </List>

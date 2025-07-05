@@ -27,7 +27,7 @@ function StudentProjectsStep() {
           <ListItem>
             <ListItemText 
               primary="Automatic Running Plan" 
-              secondary="React.js, .NET, PostgreSQL (EF)" 
+              secondary="React, .NET, PostgreSQL (EF)" 
             />
           </ListItem>
         </List>
@@ -38,7 +38,7 @@ function StudentProjectsStep() {
           <ListItem>
             <ListItemText 
               primary="Health and Nutrition" 
-              secondary="Vue.js, .NET Core, PostgreSQL (EF)" 
+              secondary="Vue, .NET Core, PostgreSQL (EF)" 
             />
           </ListItem>
         </List>
