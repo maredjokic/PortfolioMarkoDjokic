@@ -33,6 +33,7 @@ const theme = useTheme();
             <ListItemText primary="Phone" secondary="+381644402202" />
             <ListItemText primary="Linkedin" secondary="https://www.linkedin.com/in/djokicmarko/" />
             <ListItemText primary="Github" secondary="https://github.com/maredjokic/" />
+            <ListItemText primary="Citizenship" secondary="🇷🇸  🇭🇺🇪🇺" secondaryTypographyProps={{ fontSize: '2rem' }}/>
             <ListItemText primary="Location" />
          </Box>
         <Map />
