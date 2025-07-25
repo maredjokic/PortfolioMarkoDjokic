@@ -34,12 +34,12 @@ const theme = useTheme();
             <ListItemText primary="Linkedin" secondary="https://www.linkedin.com/in/djokicmarko/" />
             <ListItemText primary="Github" secondary="https://github.com/maredjokic/" />
             <ListItemText primary="Citizenship" secondary="🇷🇸  🇭🇺🇪🇺" secondaryTypographyProps={{ fontSize: '2rem' }}/>
-            <a
+            {/* <a
                 href="/static/files/CV-MarkoDjokic.pdf"
                 download
               >
                 Download Portfolio
-            </a>
+            </a> */}
             <ListItemText primary="Location" />
          </Box>
         <Map />
