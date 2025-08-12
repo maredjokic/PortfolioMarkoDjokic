@@ -17,8 +17,24 @@ function ExperienceStep() {
   return (
     <Box sx={{ p: 4, bgcolor: 'background.paper'}}>
       <Box sx={{ }}>
+        <Typography variant="h5">
+          - Joint stock company “Elektroprivreda Srbije”
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="Production and Maintenance Engineer" secondary="2025 - Present" />
+          </ListItem>
+        </List>
+        <Typography variant="h5">
+          - Software Engineer Freelancer
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText primary="Worked with several clients on various software development, marketing and branding projects. The largest project was the Teleptompter." secondary="2024 - 2025" />
+          </ListItem>
+        </List>
         <Typography variant="h5" gutterBottom>
-          Cubic Corporation (4 yrs 9 mos)
+          - Cubic Corporation (4 yrs 9 mos)
         </Typography>
         <Typography variant="body1" gutterBottom>
           Years of experience in the development of quality software in the U.S. Defence industry. 

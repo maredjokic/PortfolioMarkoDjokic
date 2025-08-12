@@ -19,7 +19,7 @@ const steps = [
     'Experiance',
     'Education',
     'Projects',
-    'Student Projects',
+    'Other Projects',
     'Languages',
     'Other'
   ];
