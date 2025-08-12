@@ -4,14 +4,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
 import '@/app/globals.css';
-import ResponsiveAppBar from '@/components/ResponsiveAppBar';
 import "leaflet/dist/leaflet.css";
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <title>CV - Marko Djokic</title>
+        <title>CV - Marko Đokic</title>
         <meta name="google-site-verification" content="-22KjBq1bKGqdKFUCev4t_pvEOnnv9fKm1QIqX-lfTo" />
         <meta name="description" content="Portfolio CV Marko Đokić Software Engineer React .NET Vue.js Nuxt Next Dev Developer Frontend Backend" />
         <meta name="keywords" content="Portfolio CV Marko Đokić Software Engineer React .NET Vue.js Nuxt Next Dev Developer Frontend Backend" />

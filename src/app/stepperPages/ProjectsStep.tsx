@@ -10,6 +10,17 @@ function ProjectsStep() {
     <Box sx={{ p: 4, bgcolor: 'background.paper', borderRadius: 2 }}>
       <Box sx={{ }}>
         <Typography variant="h5" gutterBottom>
+          2025
+        </Typography>
+        <List>
+          <ListItem>
+            <ListItemText 
+              primary="Teleprompter" 
+              secondary="Video recorder, editor app, payment - React - .NET Core" 
+            />
+          </ListItem>
+        </List>
+        <Typography variant="h5" gutterBottom>
           2022 - 2024
         </Typography>
         <List>
