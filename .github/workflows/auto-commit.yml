@@ -8,33 +8,23 @@ on:
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
+
     steps:
-      # Checkout repoa sa credentials za push
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  #  push with GITHUB_TOKEN
+          persist-credentials: true  # omogućava push sa GITHUB_TOKEN
 
-      # Napravi dummy promenu da commit uvek postoji
-      - name: Make a dummy change
-        run: echo "Last auto commit: $(date)" > .autocommit.txt
-
-      # Commituj promene sa tvojim imenom i mailom
-      - name: Commit changes
+      - name: Commit random changes
         run: |
           git config user.name "Marko Đokić"
           git config user.email "mare160696@gmail.com"
-
           # generiši random broj od 1 do 10
-          COMMITS=$(( ( RANDOM % 10 )  + 1 ))
+          COMMITS=$(( ( RANDOM % 10 ) + 1 ))
           echo "Praviću $COMMITS commitova danas."
-
           for i in $(seq 1 $COMMITS); do
             echo "Auto commit $i at $(date)" > .autocommit.txt
             git add .autocommit.txt
             git commit -m "Auto commit $i - $(date)"
           done
-
-      - name: Push changes
-        run: git push
-        
+          git push
