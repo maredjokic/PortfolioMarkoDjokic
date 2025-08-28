@@ -17,8 +17,8 @@ jobs:
       # Debug: proveri da li secret postoji
       - name: Check secret
         run: |
-          if [ -z "${{ secrets.DAILY_ACTION_PATH }}" ]; then
-            echo "Secret DAILY_ACTION_PATH nije postavljen!"
+          if [ -z "${{ secrets.DAILY_ACTION_PATH_NEW }}" ]; then
+            echo "Secret DAILY_ACTION_PATH_NEW nije postavljen!"
             exit 1
           else
             echo "Secret postoji i može se koristiti."
@@ -41,7 +41,7 @@ jobs:
           done
 
           # Postavi remote URL sa PAT iz secret-a i push
-          git remote set-url origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
+          git remote set-url origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH_NEW }}@github.com/maredjokic/PortfolioMarkoDjokic.git
           git push
 
       # Debug: potvrdi push
