@@ -23,6 +23,12 @@ jobs:
           else
             echo "Secret postoji i može se koristiti."
           fi
+          if [ -z "${{ secrets.DAILY_ACTION_PATH }}" ]; then
+            echo "Secret DAILY_ACTION_PATH nije postavljen!"
+            exit 1
+          else
+            echo "Secret postoji i može se koristiti."
+          fi
 
       # Commit random broj promena
       - name: Commit random changes
