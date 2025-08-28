@@ -1,4 +1,7 @@
-name: Daily Random Commits with Debug
+name: Daily Auto Commit
+
+permissions:
+  contents: write  # omogućava push na repozitorijum
 
 on:
   schedule:
@@ -41,8 +44,9 @@ jobs:
           done
 
           # Postavi remote URL sa PAT iz secret-a i push
-          git remote set-url origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
-          git push
+          git remote remove origin
+          git remote add origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
+          git push -u origin main
 
       # Debug: potvrdi push
       - name: Verify push
