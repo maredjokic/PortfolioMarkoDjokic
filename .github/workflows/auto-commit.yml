@@ -1,21 +1,29 @@
-name: Daily Random Commits
+name: Daily Auto Commit
 
 on:
   schedule:
-    - cron: "0 18 * * *"
-  workflow_dispatch:
+    - cron: "0 18 * * *"   # svaki dan u 18:00 UTC (20:00 po našem vremenu)
+  workflow_dispatch:       # omogućava ručno pokretanje
 
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
     steps:
+      # Checkout repoa sa credentials za push
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true  #  push with GITHUB_TOKEN
 
-      - name: Make random number of commits
+      # Napravi dummy promenu da commit uvek postoji
+      - name: Make a dummy change
+        run: echo "Last auto commit: $(date)" > .autocommit.txt
+
+      # Commituj promene sa tvojim imenom i mailom
+      - name: Commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "Marko Đokić"
+          git config user.email "mare160696@gmail.com"
 
           # generiši random broj od 1 do 10
           COMMITS=$(( ( RANDOM % 10 )  + 1 ))
