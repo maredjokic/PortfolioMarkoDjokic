@@ -1,4 +1,4 @@
-name: Daily Auto Commit
+name: Daily Random Commits with Debug
 
 on:
   schedule:
@@ -10,23 +10,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout repoa
       - name: Checkout repo
         uses: actions/checkout@v3
-        with:
-          persist-credentials: true
 
+      # Debug: proveri da li secret postoji
+      - name: Check secret
+        run: |
+          if [ -z "${{ secrets.DAILY_ACTION_PATH }}" ]; then
+            echo "Secret DAILY_ACTION_PATH nije postavljen!"
+            exit 1
+          else
+            echo "Secret postoji i može se koristiti."
+          fi
+
+      # Commit random broj promena
       - name: Commit random changes
         run: |
           git config user.name "Marko Đokić"
           git config user.email "mare160696@gmail.com"
+
           # generiši random broj od 1 do 10
           COMMITS=$(( ( RANDOM % 10 ) + 1 ))
           echo "Praviću $COMMITS commitova danas."
+
           for i in $(seq 1 $COMMITS); do
             echo "Auto commit $i at $(date)" > .autocommit.txt
             git add .autocommit.txt
             git commit -m "Auto commit $i - $(date)"
           done
 
+          # Postavi remote URL sa PAT iz secret-a i push
           git remote set-url origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
           git push
+
+      # Debug: potvrdi push
+      - name: Verify push
+        run: echo "Push pokušaj završen. Proveri logove za status."
