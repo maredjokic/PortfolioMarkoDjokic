@@ -46,9 +46,9 @@ jobs:
             git commit -m "Auto commit $i - $(date)"
           done
 
-          # Postavi remote URL sa PAT iz secret-a i push
-          git remote set-url origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH_NEW }}@github.com/maredjokic/PortfolioMarkoDjokic.git
-          git push
+          git remote remove origin
+          git remote add origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
+          git push -u origin main
 
       # Debug: potvrdi push
       - name: Verify push
