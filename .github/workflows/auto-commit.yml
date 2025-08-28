@@ -5,19 +5,17 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 18 * * *"   # svaki dan u 18:00 UTC (20:00 po našem vremenu)
-  workflow_dispatch:       # omogućava ručno pokretanje
+    - cron: "0 18 * * *"
+  workflow_dispatch:
 
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout repoa
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Debug: proveri da li secret postoji
       - name: Check secret
         run: |
           if [ -z "${{ secrets.DAILY_ACTION_PATH }}" ]; then
@@ -27,31 +25,28 @@ jobs:
             echo "Secret postoji i može se koristiti."
           fi
 
-      # Commit random broj promena bez konflikata
       - name: Commit random changes
         run: |
           git config user.name "Marko Đokić"
           git config user.email "mare160696@gmail.com"
 
-          # generiši random broj od 1 do 10
+          # Random broj commitova
           COMMITS=$(( ( RANDOM % 10 ) + 1 ))
           echo "Praviću $COMMITS commitova danas."
 
-          # Sinhronizuj lokalni branch sa remote-om da izbegnemo konflikte
           git fetch origin
           git reset --hard origin/main
-
           for i in $(seq 1 $COMMITS); do
+            # overwrite fajla svaki put
             echo "Auto commit $i at $(date)" > .autocommit.txt
             git add .autocommit.txt
             git commit -m "Auto commit $i - $(date)"
           done
 
-          # Postavi remote URL sa PAT iz secret-a i forsiraj push
+          # Postavi remote sa PAT i forsiraj push
           git remote remove origin
           git remote add origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
           git push -f origin main
 
-      # Debug: potvrdi push
       - name: Verify push
-        run: echo "Push pokušaj završen. Proveri logove za status."
+        run: echo "Push završio. Proveri logove za status."
