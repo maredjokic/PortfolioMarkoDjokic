@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # omogućava push sa GITHUB_TOKEN
+          persist-credentials: true
 
       - name: Commit random changes
         run: |
