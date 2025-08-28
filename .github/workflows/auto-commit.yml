@@ -28,5 +28,5 @@ jobs:
             git commit -m "Auto commit $i - $(date)"
           done
 
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_PAT }}@github.com/maredjokic/PortfolioMarkoDjokic.git
+          git remote set-url origin https://x-access-token:${{ secrets.DAILY_ACTION_PATH }}@github.com/maredjokic/PortfolioMarkoDjokic.git
           git push
