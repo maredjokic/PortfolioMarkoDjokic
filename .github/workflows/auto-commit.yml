@@ -27,4 +27,6 @@ jobs:
             git add .autocommit.txt
             git commit -m "Auto commit $i - $(date)"
           done
+
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_PAT }}@github.com/maredjokic/PortfolioMarkoDjokic.git
           git push
