@@ -33,7 +33,7 @@ const theme = useTheme();
             <ListItemText primary="Phone" secondary="+381644402202" />
             <ListItemText primary="Linkedin" secondary="https://www.linkedin.com/in/djokicmarko/" />
             <ListItemText primary="Github" secondary="https://github.com/maredjokic/" />
-            <ListItemText primary="Citizenship" secondary="🇷🇸  🇭🇺🇪🇺" secondaryTypographyProps={{ fontSize: '2rem' }}/>
+            <ListItemText primary="Citizenship" secondary="Serbian / Hungarian (EU)"/>
             {/* <a
                 href="/static/files/CV-MarkoDjokic.pdf"
                 download
